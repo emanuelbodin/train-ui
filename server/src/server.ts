@@ -6,7 +6,7 @@ const app = express();
 viteExpress.config({
   inlineViteConfig: {
     base: '',
-    build: { outDir: '../dist' },
+    build: { outDir: 'dist' },
   },
 });
 
