@@ -22,9 +22,15 @@ export const App = () => {
         <section className="demo-section">
           <h2>Sizes</h2>
           <div className="button-row">
-            <Button variant="primary" size="sm">Small</Button>
-            <Button variant="primary" size="md">Medium</Button>
-            <Button variant="primary" size="lg">Large</Button>
+            <Button variant="primary" size="sm">
+              Small
+            </Button>
+            <Button variant="primary" size="md">
+              Medium
+            </Button>
+            <Button variant="primary" size="lg">
+              Large
+            </Button>
           </div>
         </section>
 
@@ -32,24 +38,44 @@ export const App = () => {
           <h2>States</h2>
           <div className="button-row">
             <Button variant="primary">Enabled</Button>
-            <Button variant="primary" disabled>Disabled</Button>
+            <Button variant="primary" disabled>
+              Disabled
+            </Button>
           </div>
         </section>
 
         <section className="demo-section">
           <h2>All Variants with Different Sizes</h2>
           <div className="button-grid">
-            <Button variant="primary" size="sm">Primary Small</Button>
-            <Button variant="secondary" size="sm">Secondary Small</Button>
-            <Button variant="outlined" size="sm">Outlined Small</Button>
+            <Button variant="primary" size="sm">
+              Primary Small
+            </Button>
+            <Button variant="secondary" size="sm">
+              Secondary Small
+            </Button>
+            <Button variant="outlined" size="sm">
+              Outlined Small
+            </Button>
 
-            <Button variant="primary" size="md">Primary Medium</Button>
-            <Button variant="secondary" size="md">Secondary Medium</Button>
-            <Button variant="outlined" size="md">Outlined Medium</Button>
+            <Button variant="primary" size="md">
+              Primary Medium
+            </Button>
+            <Button variant="secondary" size="md">
+              Secondary Medium
+            </Button>
+            <Button variant="outlined" size="md">
+              Outlined Medium
+            </Button>
 
-            <Button variant="primary" size="lg">Primary Large</Button>
-            <Button variant="secondary" size="lg">Secondary Large</Button>
-            <Button variant="outlined" size="lg">Outlined Large</Button>
+            <Button variant="primary" size="lg">
+              Primary Large
+            </Button>
+            <Button variant="secondary" size="lg">
+              Secondary Large
+            </Button>
+            <Button variant="outlined" size="lg">
+              Outlined Large
+            </Button>
           </div>
         </section>
 
@@ -60,11 +86,15 @@ export const App = () => {
               { key: 'name', header: 'Name' },
               { key: 'role', header: 'Role' },
               { key: 'department', header: 'Department' },
-              { key: 'status', header: 'Status', render: (value) => (
-                <span className={`status-badge status-${value}`}>
-                  {String(value)}
-                </span>
-              )},
+              {
+                key: 'status',
+                header: 'Status',
+                render: (value) => (
+                  <span className={`status-badge status-${value}`}>
+                    {String(value)}
+                  </span>
+                ),
+              },
               { key: 'email', header: 'Email' },
             ]}
             data={[

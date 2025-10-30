@@ -9,8 +9,7 @@ const app = (0, express_1.default)();
 vite_express_1.default.config({
     inlineViteConfig: {
         base: '',
-        root: 'client',
-        build: { outDir: '../build' },
+        build: { outDir: '../dist' },
     },
 });
 vite_express_1.default.listen(app, 3000, () => console.info('Server is listening (3000)...'));
