@@ -2,6 +2,7 @@
   "name": "train-ui",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "tsx watch server/src/server.ts",
     "build": "tsc && vite build && tsc -p server"
