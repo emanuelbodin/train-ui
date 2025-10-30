@@ -1,0 +1,166 @@
+/* Apple Liquid Glass Button Styles */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+  font-weight: 500;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 1px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.btn-content {
+  position: relative;
+  z-index: 1;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Sizes */
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 13px;
+  border-radius: 10px;
+}
+
+.btn-md {
+  padding: 12px 24px;
+  font-size: 15px;
+}
+
+.btn-lg {
+  padding: 16px 32px;
+  font-size: 17px;
+  border-radius: 14px;
+}
+
+/* Primary - Blue liquid glass */
+.btn-primary {
+  background: linear-gradient(145deg,
+    rgba(0, 122, 255, 0.85) 0%,
+    rgba(0, 100, 235, 0.9) 100%
+  );
+  color: white;
+  box-shadow:
+    0 8px 24px rgba(0, 122, 255, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(145deg,
+    rgba(0, 122, 255, 0.95) 0%,
+    rgba(0, 100, 235, 1) 100%
+  );
+  box-shadow:
+    0 12px 32px rgba(0, 122, 255, 0.35),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Secondary - Gray liquid glass */
+.btn-secondary {
+  background: linear-gradient(145deg,
+    rgba(142, 142, 147, 0.3) 0%,
+    rgba(120, 120, 128, 0.4) 100%
+  );
+  color: white;
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(145deg,
+    rgba(142, 142, 147, 0.4) 0%,
+    rgba(120, 120, 128, 0.5) 100%
+  );
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Outlined - Frosted border */
+.btn-outlined {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+.btn-outlined:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.15),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Ghost - Minimal with hover effect */
+.btn-ghost {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: none;
+}
+
+.btn-ghost::before {
+  display: none;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 1);
+  backdrop-filter: blur(20px);
+}
+
+/* Danger - Red liquid glass */
+.btn-danger {
+  background: linear-gradient(145deg,
+    rgba(255, 59, 48, 0.85) 0%,
+    rgba(235, 45, 35, 0.9) 100%
+  );
+  color: white;
+  box-shadow:
+    0 8px 24px rgba(255, 59, 48, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.btn-danger:hover {
+  background: linear-gradient(145deg,
+    rgba(255, 59, 48, 0.95) 0%,
+    rgba(235, 45, 35, 1) 100%
+  );
+  box-shadow:
+    0 12px 32px rgba(255, 59, 48, 0.35),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}

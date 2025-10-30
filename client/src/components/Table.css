@@ -1,0 +1,182 @@
+/* Apple Liquid Glass Table Styles */
+.table-container {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+.liquid-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+}
+
+/* Header Styles */
+.liquid-table thead {
+  position: relative;
+}
+
+.liquid-table thead::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.2) 80%,
+    transparent 100%
+  );
+}
+
+.liquid-table thead tr {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+}
+
+.liquid-table th {
+  padding: 20px 24px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  position: relative;
+}
+
+.liquid-table th:first-child {
+  padding-left: 32px;
+  border-top-left-radius: 16px;
+}
+
+.liquid-table th:last-child {
+  padding-right: 32px;
+  border-top-right-radius: 16px;
+}
+
+/* Body Styles */
+.liquid-table tbody tr {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: transparent;
+}
+
+.liquid-table tbody tr::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.liquid-table tbody tr:hover::before {
+  opacity: 1;
+}
+
+.liquid-table tbody tr:hover {
+  transform: scale(1.01);
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+.liquid-table tbody tr:active {
+  transform: scale(0.99);
+}
+
+/* Row separator */
+.liquid-table tbody tr::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 32px;
+  right: 32px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 20%,
+    rgba(255, 255, 255, 0.08) 80%,
+    transparent 100%
+  );
+}
+
+.liquid-table tbody tr:last-child::after {
+  display: none;
+}
+
+.liquid-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 16px;
+}
+
+.liquid-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 16px;
+}
+
+.liquid-table td {
+  padding: 20px 24px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.9);
+  position: relative;
+}
+
+.liquid-table td:first-child {
+  padding-left: 32px;
+  font-weight: 500;
+}
+
+.liquid-table td:last-child {
+  padding-right: 32px;
+}
+
+/* Empty state */
+.liquid-table tbody:empty::after {
+  content: 'No data available';
+  display: block;
+  text-align: center;
+  padding: 40px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 15px;
+}
+
+/* Scrollbar styling for webkit browsers */
+.table-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}

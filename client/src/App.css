@@ -1,0 +1,76 @@
+.app {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin-bottom: 60px;
+  background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.7) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 20px;
+}
+
+.demo-section {
+  margin-bottom: 60px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.button-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+/* Status badges for table */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(10px);
+}
+
+.status-active {
+  background: linear-gradient(145deg, rgba(52, 199, 89, 0.3), rgba(48, 176, 199, 0.3));
+  color: rgba(52, 199, 89, 1);
+  box-shadow: 0 0 12px rgba(52, 199, 89, 0.3);
+}
+
+.status-inactive {
+  background: linear-gradient(145deg, rgba(142, 142, 147, 0.3), rgba(120, 120, 128, 0.3));
+  color: rgba(174, 174, 178, 1);
+  box-shadow: 0 0 12px rgba(142, 142, 147, 0.2);
+}
