@@ -17,5 +17,5 @@
     "noUnusedParameters": true
   },
 
-  "include": ["client/src", "server/src/**/*.ts"]
+  "include": ["src", "server/src/**/*.ts"]
 }
