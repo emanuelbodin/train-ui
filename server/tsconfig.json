@@ -1,13 +1,9 @@
 {
   "compilerOptions": {
-    "skipLibCheck": true,
     "module": "nodenext",
-    "allowSyntheticDefaultImports": true,
     "outDir": "./dist",
-    "rootDir": "./",
-    "useDefineForClassFields": true,
-    "esModuleInterop": true,
+    "rootDir": "./src",
     "strict": true
   },
-  "include": ["./src", "../shared"]
+  "include": ["./src"]
 }
