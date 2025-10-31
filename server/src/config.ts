@@ -13,6 +13,7 @@ function getEnvOrThrowError(env: string): string {
 
 const config = {
   trafikverketServiceUrl: getEnvOrThrowError('TRAFIKVERKET_SERVICE_URL'),
+  env: getEnvOrThrowError('ENV'),
 };
 
 export default config;
